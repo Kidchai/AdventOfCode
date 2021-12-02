@@ -1,4 +1,4 @@
-package adventofcode.year2021;
+package adventofcode.year2021.Day01;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.io.File;
