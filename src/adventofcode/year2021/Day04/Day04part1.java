@@ -24,25 +24,14 @@ public class Day04part1 {
                 allBoards.remove(i);
             }
         }
-
         int[][][] boardSet = new int[allBoards.size() / 5][5][5];
-        for (int i = 0; i < 5; i++) {
-            String[] stringAllBoards = allBoards.get(i).split(" +", 0);
-            for (int k = 0; k < 5; k++) {
-                boardSet[0][i][k] = Integer.parseInt(stringAllBoards[k]);
+        for (int j = 0; j < allBoards.size() / 5; j++) {
+            for (int i = 0; i < 5; i++) {
+                String[] stringAllBoards = allBoards.get(i).split(" +", 0);
+                for (int k = 0; k < 5; k++) {
+                    boardSet[j][i][k] = Integer.parseInt(stringAllBoards[k]);
+                }
             }
-
         }
-
-
-
     }
 }
-/*
-принять в качестве ввода числа, которые будут называться
-записать их в коллекцию
-принимать в цикле do while
-
-доски это коллекция двумерных массивов, где размер коллекции - число досок
-размер массива - 5 на 5
- */
