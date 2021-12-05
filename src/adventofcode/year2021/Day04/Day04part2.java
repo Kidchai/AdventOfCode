@@ -24,8 +24,6 @@ public class Day04part2 {
         }
 
         ArrayList<int[][]> boardSet = new ArrayList<>();
-        //int[][] board = new int[5][5];
-        System.out.println(boardSet.size());
         for (int i = 0; i < allBoards.size() / 5; i++) {
             boardSet.add(new int[5][5]);
         }
@@ -38,7 +36,8 @@ public class Day04part2 {
             }
         }
         for (int x : drawNumbers) {
-            for (int i = 0; i < allBoards.size() / 5; i++) {
+            for (int i = boardSet.size() - 1;  i >= 0; i--) {
+                boolean shouldRemove = false;
                 for (int j = 0; j < 5; j++) {
                     for (int k = 0; k < 5; k++) {
                         if (boardSet.get(i)[j][k] == x) {
@@ -49,12 +48,15 @@ public class Day04part2 {
                                     bingo = false;
                                 }
                             }
-                            if (bingo) {
+                            if (bingo && boardSet.size() != 1) {
+                                shouldRemove = true;
+                            }
+                            if (bingo && boardSet.size() == 1) {
                                 int sum = 0;
                                 for (int j2 = 0; j2 < 5; j2++) {
                                     for (int k2 = 0; k2 < 5; k2++) {
-                                        if (boardSet.get(i)[j2][k2] != -1) {
-                                            sum += boardSet.get(i)[j2][k2];
+                                        if (boardSet.get(0)[j2][k2] != -1) {
+                                            sum += boardSet.get(0)[j2][k2];
                                         }
                                     }
                                 }
@@ -69,12 +71,15 @@ public class Day04part2 {
                                     bingo = false;
                                 }
                             }
-                            if (bingo) {
+                            if (bingo && boardSet.size() != 1) {
+                                shouldRemove = true;
+                            }
+                            if (bingo && boardSet.size() == 1) {
                                 int sum = 0;
                                 for (int j2 = 0; j2 < 5; j2++) {
                                     for (int k2 = 0; k2 < 5; k2++) {
-                                        if (boardSet.get(i)[j2][k2] != -1) {
-                                            sum += boardSet.get(i)[j2][k2];
+                                        if (boardSet.get(0)[j2][k2] != -1) {
+                                            sum += boardSet.get(0)[j2][k2];
                                         }
                                     }
                                 }
@@ -86,11 +91,13 @@ public class Day04part2 {
                         }
                     }
                 }
+                if (shouldRemove) {
+                    boardSet.remove(i);
+                }
             }
         }
     }
     static void printBingoBoards (ArrayList<int[][]> boardSet) {
-        System.out.print("\n\n##############################\n\n");
         for (int[][] ints : boardSet) {
             for (int j = 0; j < 5; j++) {
                 for (int k = 0; k < 5; k++) {
@@ -102,8 +109,3 @@ public class Day04part2 {
         }
     }
 }
-/*
-если бинго тру && размер коллекции boardSet != 1, заполнить эту доску -2
-иначе если бинго тру && размер коллекции boardSet = 1 вывести данные для этой доски
-
- */
