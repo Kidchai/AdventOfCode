@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Day03part1 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("inputDay03.txt"));
+        Scanner scanner = new Scanner(new File("src/year2021/Day03/inputDay03.txt"));
         ArrayList<ArrayList<Integer>> indices = new ArrayList<>();
         for (int i = 0; i < 12; i++) {
             indices.add(new ArrayList<>());

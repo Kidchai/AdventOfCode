@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Day03part2 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("inputDay03.txt"));
+        Scanner scanner = new Scanner(new File("src/year2021/Day03/inputDay03.txt"));
         String oxygenGeneratorRating; // the most common
         String CO2scrubberRating; // the least common
         ArrayList<String> indices = new ArrayList<>();

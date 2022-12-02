@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Day04part1 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("inputDay04.txt"));
+        Scanner scanner = new Scanner(new File("src/year2021/Day04/inputDay04.txt"));
         String stringDrawNumbers = scanner.nextLine();
         String[] stringArrayDrawNumbers = stringDrawNumbers.split(",", 0);
         int[] drawNumbers = new int[stringArrayDrawNumbers.length];

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Day02part2 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("inputDay02.txt"));
+        Scanner scanner = new Scanner(new File("src/year2021/Day02/inputDay02.txt"));
         int horizontalPosition = 0;
         int depth = 0;
         int aim = 0;
