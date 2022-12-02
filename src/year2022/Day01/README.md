@@ -1,4 +1,4 @@
-original source: [adventofcode.com/year2021/day/3](https://adventofcode.com/year2021/day/3)
+original source: [adventofcode.com/year2022/day/1](https://adventofcode.com/2022/day/1)
 ## --- Day 1: Calorie Counting ---
 The jungle must be too overgrown and difficult to navigate in vehicles or access from the air; the Elves' expedition traditionally goes on foot. As your boats approach land, the Elves begin taking inventory of their supplies. One important consideration is food - in particular, the number of Calories each Elf is carrying (your puzzle [input](https://github.com/Kidchai/AdventOfCode/blob/main/src/year2022/Day01/input.txt)).
 
