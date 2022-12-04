@@ -10,10 +10,10 @@ public class part2 {
         Scanner scanner = new Scanner(new File("src/year2022/Day04/input.txt"));
         int sum = 0;
         while (scanner.hasNext()) {
-            String[] assignments = scanner.nextLine().split(",\\s*");
+            String[] assignments = scanner.nextLine().split(",");
             int[] elf1 = getIntArray(assignments[0]);
             int[] elf2 = getIntArray(assignments[1]);
-            if (isOverlapped(elf1, elf2)) {
+            if (isOverlapped(elf1[0], elf1[1], elf2[0], elf2[1])) {
                 sum++;
             }
         }
@@ -26,10 +26,7 @@ public class part2 {
                 .toArray();
     }
 
-    private static boolean isOverlapped(int[] elf1, int[] elf2) {
-        return (elf1[0] >= elf2[0] && elf1[0] <= elf2[1]) ||
-                (elf1[1] >= elf2[0] && elf1[1] <= elf2[1]) ||
-                (elf2[0] >= elf1[0] && elf2[0] <= elf1[1]) ||
-                (elf2[1] >= elf1[0] && elf2[1] <= elf1[1]);
+    private static boolean isOverlapped(int x1, int x2, int y1, int y2) {
+        return (x2 >= y1 && x2 <= y2) || (y2 >= x1 && y2 <= x2);
     }
 }

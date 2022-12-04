@@ -13,7 +13,7 @@ public class part1 {
             String[] assignments = scanner.nextLine().split(",\\s*");
             int[] elf1 = getIntArray(assignments[0]);
             int[] elf2 = getIntArray(assignments[1]);
-            if (isOneFullyContainOther(elf1, elf2)) {
+            if (isOneFullyContainOther(elf1[0], elf1[1], elf2[0], elf2[1])) {
                 sum++;
             }
         }
@@ -26,8 +26,7 @@ public class part1 {
                 .toArray();
     }
 
-    private static boolean isOneFullyContainOther(int[] elf1, int[] elf2) {
-        return (elf1[0] <= elf2[0] && elf1[1] >= elf2[1]) ||
-                (elf1[0] >= elf2[0] && elf1[1] <= elf2[1]);
+    private static boolean isOneFullyContainOther(int x1, int x2, int y1, int y2) {
+        return (x1 <= y1 && x2 >= y2) || (y1 <= x1 && y2 >= x2);
     }
 }
