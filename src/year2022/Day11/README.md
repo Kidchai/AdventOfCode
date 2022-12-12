@@ -9,7 +9,7 @@ with your missing things!
 To get your stuff back, you need to be able to predict where the monkeys will throw your items. After some careful 
 observation, you realize the monkeys operate based on how worried you are about each item.
 
-You take some notes (your puzzle [input]()) on the items each monkey currently has, how worried you are about those 
+You take some notes (your puzzle [input](https://github.com/Kidchai/AdventOfCode/blob/main/src/year2022/Day11/input.txt)) on the items each monkey currently has, how worried you are about those 
 items, and how the monkey makes decisions based on your worry level. For example:
 
     Monkey 0:
@@ -227,8 +227,6 @@ situation can be found by multiplying these together: `10605`.
 
 Figure out which monkeys to chase by counting how many items they inspect over 20 rounds. What is the level of monkey 
 business after 20 rounds of stuff-slinging simian shenanigans?
-
-The first half of this puzzle is complete! It provides one gold star: *
 
 ## --- Part Two ---
 
